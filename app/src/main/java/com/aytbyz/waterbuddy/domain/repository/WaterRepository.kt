@@ -1,4 +1,9 @@
 package com.aytbyz.waterbuddy.domain.repository
 
-class WaterRepository {
+import com.aytbyz.waterbuddy.domain.model.WaterIntake
+
+interface WaterRepository {
+    suspend fun addWater(intake: WaterIntake)
+    suspend fun getTodayIntakes(): List<WaterIntake>
+    suspend fun getAllIntakes(): List<WaterIntake>
 }
