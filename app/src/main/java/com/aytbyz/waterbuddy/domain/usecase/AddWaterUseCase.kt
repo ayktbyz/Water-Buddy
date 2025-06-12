@@ -7,8 +7,11 @@ import javax.inject.Inject
 class AddWaterUseCase @Inject constructor(
     private val repository: WaterRepository
 ) {
-    suspend operator fun invoke(amountMl: Int) {
-        val intake = WaterIntake(amountMl = amountMl, timestamp = System.currentTimeMillis())
+    suspend operator fun invoke(amount: Double) {
+        val intake = WaterIntake(
+            amount = amount,
+            timestamp = System.currentTimeMillis()
+        )
         repository.addWater(intake)
     }
 }

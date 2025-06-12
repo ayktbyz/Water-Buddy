@@ -6,7 +6,7 @@ import javax.inject.Inject
 class GetDailyWaterIntakeUseCase @Inject constructor(
     private val repository: WaterRepository
 ) {
-    suspend operator fun invoke(): Int {
-        return repository.getTodayIntakes().sumOf { it.amountMl }
+    suspend operator fun invoke(): Double {
+        return repository.getTodayIntakes().sumOf { it.amount }
     }
 }
