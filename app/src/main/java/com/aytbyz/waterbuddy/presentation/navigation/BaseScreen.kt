@@ -1,7 +1,6 @@
 package com.aytbyz.waterbuddy.presentation.navigation
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -21,11 +20,5 @@ sealed class BaseScreen(
         route = "history",
         label = "Geçmiş",
         icon = Icons.Filled.DateRange
-    )
-
-    data object Profile : BaseScreen(
-        route = "profile",
-        label = "Profil",
-        icon = Icons.Filled.AccountBox
     )
 }

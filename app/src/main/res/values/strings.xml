@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Water Buddy</string>
+
+    <string name="water_amount_today">Bugünkü Su Miktarı: %1$d ml</string>
+    <string name="drink_250ml">250ml Su İç</string>
+    <string name="drink_500ml">500ml Su İç</string>
+    <string name="drink_750ml">750ml Su İç</string>
+    <string name="drink_1lt">1lt Su İç</string>
+
+    <string name="water_history_title">Su İçme Geçmişi</string>
+    <string name="no_water_history_message">Henüz su içmediniz. Su içmeye başlamalısınız!</string>
+    <string name="water_amount_with_time">%1$d ml - %2$s</string>
+
+    <string name="clear_data">Tüm Verileri Temizle</string>
 </resources>

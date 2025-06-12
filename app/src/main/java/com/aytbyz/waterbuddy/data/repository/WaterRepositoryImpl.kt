@@ -1,5 +1,6 @@
 package com.aytbyz.waterbuddy.data.repository
 
+import android.util.Log
 import com.aytbyz.waterbuddy.data.local.dao.WaterIntakeDao
 import com.aytbyz.waterbuddy.data.mapper.toDomain
 import com.aytbyz.waterbuddy.data.mapper.toEntity
@@ -20,6 +21,11 @@ class WaterRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getAllIntakes(): List<WaterIntake> {
+        Log.d("WaterRepo", "getAllIntakes: ${dao.getAllIntakes()}")
         return dao.getAllIntakes().map { it.toDomain() }
+    }
+
+    override suspend fun clearAll() {
+        dao.clearAll()
     }
 }

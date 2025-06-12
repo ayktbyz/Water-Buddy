@@ -7,6 +7,7 @@ import com.aytbyz.waterbuddy.data.local.db.AppDatabase
 import com.aytbyz.waterbuddy.data.repository.WaterRepositoryImpl
 import com.aytbyz.waterbuddy.domain.repository.WaterRepository
 import com.aytbyz.waterbuddy.domain.usecase.AddWaterUseCase
+import com.aytbyz.waterbuddy.domain.usecase.ClearAllWaterIntakesUseCase
 import com.aytbyz.waterbuddy.domain.usecase.GetAllWaterIntakesUseCase
 import com.aytbyz.waterbuddy.domain.usecase.GetDailyWaterIntakeUseCase
 import dagger.Module
@@ -42,4 +43,8 @@ object AppModule {
     @Provides
     fun provideGetDailyWaterIntakeUseCase(repository: WaterRepository): GetDailyWaterIntakeUseCase =
         GetDailyWaterIntakeUseCase(repository)
+
+    @Provides
+    fun provideClearAllUseCase(repository: WaterRepository): ClearAllWaterIntakesUseCase =
+        ClearAllWaterIntakesUseCase(repository)
 }

@@ -8,6 +8,7 @@ import androidx.navigation.NavHostController
 import com.aytbyz.waterbuddy.presentation.navigation.BaseScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.aytbyz.waterbuddy.presentation.history.HistoryScreen
 import com.aytbyz.waterbuddy.presentation.home.HomeScreen
 
 @Composable
@@ -23,7 +24,8 @@ fun AppNavGraph(
         composable(BaseScreen.Home.route) {
             HomeScreen()
         }
-        composable(BaseScreen.History.route) { }
-        composable(BaseScreen.Profile.route) { }
+        composable(BaseScreen.History.route) {
+            HistoryScreen()
+        }
     }
 }

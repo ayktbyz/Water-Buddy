@@ -29,8 +29,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val items = listOf(
                     BaseScreen.Home,
-                    BaseScreen.History,
-                    BaseScreen.Profile
+                    BaseScreen.History
                 )
 
                 Scaffold(
