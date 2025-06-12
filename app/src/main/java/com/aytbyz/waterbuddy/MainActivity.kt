@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -50,7 +51,9 @@ class MainActivity : ComponentActivity() {
                                         }
                                     },
                                     label = { Text(screen.label) },
-                                    icon = { screen.icon }
+                                    icon = {
+                                        Icon(imageVector = screen.icon, contentDescription = screen.label)
+                                    }
                                 )
                             }
                         }
